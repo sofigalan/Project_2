@@ -20,6 +20,9 @@ mag=[]
 place=[]
 time=[]
 geometry=[]
+data_dic=[]
+helpdata={}
+diccionario={}
 datechange=""
 fmt = "%Y-%m-%d"
 
@@ -34,14 +37,16 @@ for index in response['features']:
     datechange=datetime.datetime.fromtimestamp(index['properties']['time']/1000)
     time.append(datechange.strftime(fmt))
     geometry.append(index['geometry']['coordinates'])
-
-
+    diccionario = {'mag': index['properties']['mag'],'place':index['properties']['place'],'time':datechange.strftime(fmt)}
+    data_dic.append(diccionario)
+    print(geometry)
 
 
 dic={"Place": place,
  	"mag":mag, 
     "time":time, 
-    "geometry": geometry}
+    "geometry": geometry,
+    "data_dic":data_dic}
 
 
 def last_quake():

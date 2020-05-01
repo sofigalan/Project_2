@@ -11,15 +11,35 @@ body {
   padding: 20px 20px 20px 20px;
   width: 100%;
  }
-table {
+
+ table {
   border-collapse: collapse;
   border: 2px black solid;
-  font: 12px sans-serif;
+  font: 15px sans-serif;
+}
+#mytable {
+  border-collapse: collapse;
+  border: 2px black solid;
+  font: 20px sans-serif;
 }
 
 td {
   border: 1px black solid;
   padding: 5px;
+  font-size: 15px;
+}
+
+.my-custom-scrollbar {
+position: relative;
+height: 500px;
+overflow: auto;
+}
+.table-wrapper-scroll-y {
+display: block;
+}
+
+.oculto{
+  display: none;
 }
 
 @media (min-width: 768px) {

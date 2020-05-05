@@ -39,7 +39,6 @@ for index in response['features']:
     geometry.append(index['geometry']['coordinates'])
     diccionario = {'mag': index['properties']['mag'],'place':index['properties']['place'],'time':datechange.strftime(fmt)}
     data_dic.append(diccionario)
-    print(geometry)
 
 
 dic={"Place": place,

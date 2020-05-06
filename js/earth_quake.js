@@ -10,8 +10,6 @@ var url = "https://earthquake-app-api.herokuapp.com/";
 //zoom: 3.5 // starting zoom
 //});
 
-
-
 var myMap = L.map("map", {
   center: [22.4284706,-102.1276627],
   zoom: 4.3
@@ -159,7 +157,7 @@ var profufinal =  profu2[1].substring(0, profu2[1].length - 4)
 
 L.circleMarker([latlng_2coma.substring(0, latlng_2coma.length - 1),latlng_2[4].substring(0, latlng_2[4].length - 1)],circlemark).bindPopup("<h3>Magnitude" +magni2[1] + "<h3><h3>Place: " +place2[1]  + "</h3>").addTo(myMap);
 
-drawChart(parseInt(magni2[1]));
+
 
 
 const type = 'donut'
@@ -176,7 +174,7 @@ var chart = c3.generate({
     donut: { title }
 });
 
-
+drawChart(parseInt(magni2[1]));
 
 });
 
